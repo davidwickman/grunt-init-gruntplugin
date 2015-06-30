@@ -58,7 +58,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('node_version', grunt.package.engines.node)
   ], function(err, props) {
     // Set a few grunt-plugin-specific properties.
-    props.short_name = props.name.replace(/^grunt[\-_]?/, '').replace(/[\W_]+/g, '_').replace(/^(\d)/, '_$1');
+    props.short_name = props.name.replace(/^grunt[\-_]?/, '').replace(/[\W_]+/g, '-').replace(/^(\d)/, '-$1');
     props.npm_test = 'grunt test';
     props.keywords = ['gruntplugin'];
     props.devDependencies = {
